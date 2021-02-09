@@ -31,7 +31,7 @@ try:
 	card= py3_rfidiot.card
 except:
 	print("Couldn't open reader!")
-	os._exit(True)
+	sys.exit(1)
 
 card.info('send_apdu v0.2a')
 card.select()
