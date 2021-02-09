@@ -126,7 +126,7 @@ if OptsEnv in os.environ:
 		configfile= open(os.environ[OptsEnv])
 		extraopts= configfile.readline().split()
 	except:
-		print(f"*** warning: config file set by ENV not found ({os.environ[OptsEnv]}) or empty!")
+		print("*** warning: config file set by ENV not found (", os.environ[OptsEnv], ") or empty!")
 		print("*** not checking for other option files!")
 else:
 	for path in ['.','/etc']:
