@@ -1,5 +1,28 @@
-/* RFIDIOt.py - RFID IO tools for python
- *
+# RFIDIOt.py - RFID IO tools for python
+
+This is a port of the RFIDIOt core to python 3. **It has not been thoroughly
+tested!** The ported core can be found in the `py3_rfidiot` folder. So use
+
+```python
+import py3_rfidiot
+```
+
+Basically applied `2to3` to the `rfidiot/` files and fixed a few issues that
+popped up:
+
+* moved to format strings for prints -- v likely some were missed
+* removed the use of `string` module
+* adjusted reader names to remove `PICC` as it wasn't matching (at least for ACR122U)
+
+Example files ported and tested are added with the `py3_` prefix.
+
+E.g: `py3_send_apdu.py` works. None of the other example files from the
+original repo have been tested, hence why there aren't any `py3_` variants. 
+Port them if you need them.
+
+PRs welcome.
+
+/* 
  * Adam Laurie <adam@algroup.co.uk>
  * http://rfidiot.org/
  *
